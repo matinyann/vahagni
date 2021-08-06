@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Memory game</title>
+</head>
+
+<body>
+    <script src="../globe/main.js"></script>
+    <a href="../index.html" class="back">Back</a>
+    <div class="name">vemory game</div>
+    <div class="wrapper">
+        <section class="reset">
+            <div class="d">
+                <form>
+                    <button class="button"><span>Reset</span></button>
+                </form>
+            </div>
+            <div class="points">Points: 0</div>
+            <div id="timer">00:00</div>
+        </section>
+        <section class="memory-game">
+            <div class="memory-card" data-framework="aurelia">
+                <img class="front-face" src="./img/vahagni1.jpg" alt="Aurelia">
+                <img class="back-face" src="./img/2.jpg" alt="JS Badge">
+            </div>
+            <div class="memory-card" data-framework="aurelia">
+                <img class="front-face" src="./img/vahagni1.jpg" alt="Aurelia">
+                <img class="back-face" src="./img/2.jpg" alt="JS Badge">
+            </div>
+
+            <div class="memory-card" data-framework="vue">
+                <img class="front-face" src="./img/vahagni2.jpg" alt="Vue">
+                <img class="back-face" src="./img/2.jpg" alt="JS Badge">
+            </div>
+            <div class="memory-card" data-framework="vue">
+                <img class="front-face" src="./img/vahagni2.jpg" alt="Vue">
+                <img class="back-face" src="./img/2.jpg" alt="JS Badge">
+            </div>
+            <div class="memory-card" data-framework="angular">
+                <img class="front-face" src="./img/vahagni3.jpg" alt="Angular">
+                <img class="back-face" src="./img/2.jpg" alt="JS Badge">
+            </div>
+            <div class="memory-card" data-framework="angular">
+                <img class="front-face" src="./img/vahagni3.jpg" alt="Angular">
+                <img class="back-face" src="./img/2.jpg" alt="JS Badge">
+            </div>
+            <div class="memory-card" data-framework="ember">
+                <img class="front-face" src="./img/vahagni4.jpg" alt="Ember">
+                <img class="back-face" src="./img/2.jpg" alt="JS Badge">
+            </div>
+            <div class="memory-card" data-framework="ember">
+                <img class="front-face" src="./img/vahagni4.jpg" alt="Ember">
+                <img class="back-face" src="./img/2.jpg" alt="JS Badge">
+            </div>
+            <div class="memory-card" data-framework="backbone">
+                <img class="front-face" src="./img/vahagni5.jpg" alt="Backbone">
+                <img class="back-face" src="./img/2.jpg" alt="JS Badge">
+            </div>
+            <div class="memory-card" data-framework="backbone">
+                <img class="front-face" src="./img/vahagni5.jpg" alt="Backbone">
+                <img class="back-face" src="./img/2.jpg" alt="JS Badge">
+            </div>
+            <div class="memory-card" data-framework="react">
+                <img class="front-face" src="./img/vahagni6.jpg" alt="React">
+                <img class="back-face" src="./img/2.jpg" alt="JS Badge">
+            </div>
+            <div class="memory-card" data-framework="react">
+                <img class="front-face" src="./img/vahagni6.jpg" alt="React">
+                <img class="back-face" src="./img/2.jpg" alt="JS Badge">
+            </div>
+            <div class="memory-card" data-framework="vahagni7">
+                <img class="front-face" src="./img/vahagni7.jpg" alt="Vahagni7">
+                <img class="back-face" src="./img/2.jpg" alt="JS Badge">
+            </div>
+            <div class="memory-card" data-framework="vahagni7">
+                <img class="front-face" src="./img/vahagni7.jpg" alt="Vahagni7">
+                <img class="back-face" src="./img/2.jpg" alt="JS Badge">
+            </div>
+            <div class="memory-card" data-framework="vahagni8">
+                <img class="front-face" src="./img/vahagni8.jpg" alt="Vahagni8">
+                <img class="back-face" src="./img/2.jpg" alt="JS Badge">
+            </div>
+            <div class="memory-card" data-framework="vahagni8">
+                <img class="front-face" src="./img/vahagni8.jpg" alt="Vahagni8">
+                <img class="back-face" src="./img/2.jpg" alt="JS Badge">
+            </div>
+            <div class="memory-card" data-framework="vahagni9">
+                <img class="front-face" src="./img/vahagni9.jpg" alt="Vahagni9">
+                <img class="back-face" src="./img/2.jpg" alt="JS Badge">
+            </div>
+            <div class="memory-card" data-framework="vahagni9">
+                <img class="front-face" src="./img/vahagni9.jpg" alt="Vahagni9">
+                <img class="back-face" src="./img/2.jpg" alt="JS Badge">
+            </div>
+
+        </section>
+    </div>
+
+
+
+    <script>
+        const cards = document.querySelectorAll('.memory-card');
+
+        let hasFlippedCard = false;
+        let lockBoard = false;
+        let firstCard, secondCard;
+
+        function flipCard() {
+            if (lockBoard) return;
+            if (this === firstCard) return;
+
+            this.classList.add('flip');
+
+            if (!hasFlippedCard) {
+                hasFlippedCard = true;
+                firstCard = this;
+                console.log(true);
+
+                return;
+            }
+
+            secondCard = this;
+            checkForMatch();
+        }
+
+        function checkForMatch() {
+            let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
+
+            isMatch ? disableCards() : unflipCards();
+        }
+
+        let counterBlock = document.querySelector(".points");
+        let counter = 0;
+
+        function disableCards() {
+            firstCard.removeEventListener('click', flipCard);
+            secondCard.removeEventListener('click', flipCard);
+            counter++;
+            counterBlock.innerHTML = `Points: ${counter}`
+            if (counter === 9) {
+                stop();
+            }
+            resetBoard();
+        }
+
+        function unflipCards() {
+            lockBoard = true;
+
+            setTimeout(() => {
+                firstCard.classList.remove('flip');
+                secondCard.classList.remove('flip');
+
+                resetBoard();
+            }, 1500);
+        }
+
+        function resetBoard() {
+            [hasFlippedCard, lockBoard] = [false, false];
+            [firstCard, secondCard] = [null, null];
+        }
+
+        (function shuffle() {
+            cards.forEach(card => {
+                let randomPos = Math.floor(Math.random() * 18);
+                card.style.order = randomPos;
+            });
+        })();
+
+        cards.forEach(card => card.addEventListener('click', flipCard));
+
+        const images = document.querySelectorAll('img');
+
+        images.forEach(e => {
+            e.addEventListener("click", () => {
+                start();
+            });
+        });
+
+        const timer = document.querySelector('#timer');
+        let m = 0;
+        let s = 0;
+        let stopTime = true;
+
+        function start() {
+            if (stopTime === true) {
+                stopTime = false;
+                cycle();
+            }
+        }
+
+        function stop() {
+            timer.classList.add("blink");
+            if (stopTime === false) {
+                stopTime = true;
+            }
+        }
+
+        function cycle() {
+            if (stopTime === false) {
+                s = Number(s);
+                m = Number(m);
+
+                s = s + 1;
+
+                if (s === 60) {
+                    m = m + 1;
+                    s = 0;
+                }
+                if (m === 60) {
+                    m = 0;
+                    s = 0;
+                }
+
+                if (s < 10 || s === 0) {
+                    s = '0' + s;
+                }
+                if (m < 10 || m === 0) {
+                    m = '0' + m;
+                }
+
+                timer.innerHTML = m + ':' + s;
+
+                setTimeout(cycle, 1000);
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

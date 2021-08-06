@@ -1,0 +1,178 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+        
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        canvas {
+            display: block;
+        }
+
+        body {
+            height: 100vh;
+            min-height: 950px;
+            overflow-x: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: "Montserrat";
+            background-color: black;
+            background-repeat: no-repeat;
+            background-size: cover;
+            cursor: url(https://cur.cursors-4u.net/cursors/cur-2/cur116.cur), progress;
+        }
+
+        .back {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 100px;
+            height: 40px;
+            font-size: 26px;
+            color: #efefef;
+            background-color: #19192e;
+            border: 1px solid black;
+            border-radius: 10px;
+            cursor: url(https://cur.cursors-4u.net/cursors/cur-2/cur116.cur), progress;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 10px #333d64;
+        }
+
+        .name {
+            position: absolute;
+            top: 0;
+            font-size: 100px;
+            color: #fff;
+            text-shadow: 4px 4px #326deb;
+            user-select: none;
+            text-transform: uppercase;
+        }
+
+        .wrapper {
+            position: absolute;
+            z-index: 5;
+            width: 100%;
+            max-width: 955px;
+        }
+
+        .memory-game {
+            width: 955px;
+            height: 640px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            perspective: 1000px;
+        }
+
+        .memory-card {
+            width: 150px;
+            height: calc(33.333% - 10px);
+            margin: 5px;
+            position: relative;
+            transform: scale(1);
+            transform-style: preserve-3d;
+            transition: transform .5s;
+        }
+
+        .memory-card:active {
+            transform: scale(0.97);
+            transition: transform .2s;
+        }
+
+        .memory-card.flip {
+            transform: rotateY(180deg);
+        }
+
+        .front-face,
+        .back-face {
+            width: 100%;
+            height: 100%;
+            padding: 5px;
+            position: absolute;
+            border-radius: 10px;
+            background: #4785e7;
+            backface-visibility: hidden;
+            box-shadow: 4px 3px 4px #00000099;
+            user-select: none;
+        }
+
+        .front-face {
+            transform: rotateY(180deg);
+        }
+
+        .button {
+            margin: 0 5px;
+            border-radius: 10px;
+            background-color: #4785e7;
+            border: none;
+            height: 70px;
+            text-align: center;
+            color: white;
+            font-size: 30px;
+            padding: 20px;
+            width: 150px;
+            transition: all 0.5s;
+            cursor: url(https://cur.cursors-4u.net/cursors/cur-2/cur116.cur), progress;
+        }
+
+        .d {
+            height: 70px;
+            border: 3px white;
+        }
+
+        .reset {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .points {
+            color: #efefef;
+            font-size: 26px;    
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #timer {
+            font-size: 33px;
+            color: #efefef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .blink {
+            animation-name: blink-timer;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-direction: alternate-reverse;
+        }
+
+        @keyframes blink-timer {
+            0% {
+                font-size: 33px;
+                color: #efefef;
+            }
+
+            25% {
+                color: #ff0000;
+                font-size: 36px;
+            }
+
+            75% {
+                font-size: 33px;
+                color: #efefef;
+            }
+
+            100% {
+                font-size: 36px;
+                color: #ff0000;
+            }
+        }   

@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "..\\.."
+		},
+		{
+			"path": "..\\..\\globe-master"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "vahagni-2-test"
+	}
+}

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--header-style-->
+        <link rel="stylesheet" href="header-style/css/main.css">
+        <script src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        
+        <link rel="stylesheet" href="style/main.css">
+        <link rel="stylesheet" href="style/reloader.css">
+        <link rel="stylesheet" href="style/responsive.css">
+
+
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="300x300" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="200x200" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <title>About Rrgion Lori</title>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo"></div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#home" class="menu_link lng-header-home">Home</a></li>
+                    <li><a href="#location" class="menu_link lng-header-location">Location</a></li>
+                    <li><a href="#about" class="menu_link lng-header-about">About</a></li>
+                    <li><a href="#game" class="menu_link lng-header-game">Game</a></li>
+
+                    <li>
+                        <div class="img-lang"></div>
+                        <select name="lang" id="select_language">
+                            <option value="arm">AM</option>
+                            <option value="en" selected>EN</option>
+                        </select>
+                    </li>
+                </ul>
+                <div class="theme">
+                    <input type="checkbox" class="toggle-button">
+                </div>
+            </div>
+            <div class="menu_icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu_mob">
+                <a href="#home" class="menu_link lng-header-home-mob">Home</a>
+                <a href="#location" class="menu_link lng-header-location-mob">Location</a>
+                <a href="#about" class="menu_link lng-header-about-mob">About</a>
+                <a href="#game" class="menu_link lng-header-game-mob">Game</a>
+                <a>
+                    <span class="lng-theme">Theme</span>
+                    <div class="theme">
+                        <input type="checkbox" class="toggle-button">
+                    </div>
+                </a>
+                <a>
+                    <span class="lng-lang">Language</span>
+                    <select name="lang" id="select_language">
+                        <option value="arm">AM</option>
+                        <option value="en" selected>EN</option>
+                    </select>
+                </a>
+                <div id="wrapper">
+                    <div id="app">
+                        <div id="temperature">
+                            <h4></h4>
+                            <span id="c"></span><br>
+                            <span id="f"></span>
+                        </div>
+                        <div id="weather">
+                            <span id="main"></span>
+                            <span id="description"></span>
+                            <img id="weather_icon">
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+        <div id="wrapper">
+            <div id="app">
+                <div id="temperature">
+                    <h4></h4>
+                    <span id="c"></span><br>
+                    <span id="f"></span>
+                </div>
+                <div id="weather">
+                    <span id="main"></span>
+                    <span id="description"></span>
+                    <img id="weather_icon">
+                </div>
+            </div>
+           
+        </div>
+    </header>
+    <div class="page_0">
+        <script src="./globe/main.js"></script>
+        <div class="title">
+            <h1 class="lng-village_name">Vahagni</h1>
+            <h5 class="lng-village_description">A beautiful village</h5>
+                
+        </div>
+    </div>
+
+    <div class="game-cont">
+        <div class="game">
+            
+        </div>
+    </div>
+
+    <section class="all_content all_content_one">
+         <section class="section section_one" id="home">
+            <div class="section_one_h1">
+                <h1 class="lng-lori">Lori Region</h1>
+            </div>
+            <div class="map_p">
+                <p class="lng-lori-p-1">
+                    Lori is a region of Armenia. It is located in the north of the country, bordering Georgia. Vanadzor is the center of the region. Other important cities are Stepanavan, Alaverdi and Spitak. Here are the UNESCO World Heritage Sights Haghpat and Sanahin Monasteries, also the well-preserved Akhtala Monastery, where Armenians, Georgians and Greeks make an annual pilgrimage on September 20-21. The region had great damages after the 1988 earthquake.
+                </p>
+
+                <img src="header-style/img/Lori_Coaf.jpg" alt="" class="map-p-img-one">
+            </div>
+            <div class="map_p map_p_two">
+                <img src="header-style/img/map.png" alt="" class="map-p-img-two">
+                <p class="map-p-p-two lng-lori-p-2">
+                    The regional center of Lori region is Vanadzor (before called Mets Karakilisa, Kirovakan), which was a small village at the beginning of the last century. As an urban settlement, it was formed in the 1930s, and its rapid development has taken place since the 1950s.
+                </p>
+            </div>
+         </section>
+
+        <section class="section section_two">
+             <!--TODO:-->
+
+             <h2 class="lng-vahagni-history">The Story of Vahagni</h2>
+             <p class="lng-vahagni-history-p-1">
+                Vahagnի village is a quite old village. According to historians, it has a history of 3500 years. There were 2 neighbor villages in the previous territory of the settlement: Verin Vahagn և Nerkin Vahagni (in honor of the Armenian God of courage Vahagn, the villagers called those areas Hagni). In the 17th century, the Persians settled in Nerkin Vahagni and named the village Shahali. In 1802 the village was relocated with 7 families who migrated from Western Armenia, Karabakh and Ijevan. 1947 the settlement was renamed Vahagni. In 1807, the church of the village, Surb Nshan, was built. Because of the devastating earthquake of 1988 destroyed the church's roof and there are only still standing the walls of the church and the bell tower. In the center of the village, on the hill, stands the monument to Vahagn's glory. The monument to Vahagn the Dragon was erected in honor of the people of Vahagni who died in the Great Patriotic War.
+            </p>
+
+            <a class="learn_more learn_his lng-learn-more"  href="#history">Learn more ></a>
+
+            <div class="monumet-scroll">
+                <div class="monument-scroll-img">
+                    <img src="img/photo-11.jpg" alt="">
+                    <p class="lng-monument-scroll-p-1">
+                        It is not a secret, that the Armenian monasteries and churches have played a great role in the spiritual and cultural life of the Armenian people. It is also not a secret that in Armenia, outside of the churches, there are many churches, monasteries and chapels in the country without state care, which alos have cultural value.
+                    </p>
+                    <a class="learn_more learn_church lng-learn-church" href="#church">Learn more ></a>
+                </div>
+
+                <div class="monument-scroll-img">
+                    <img src="img/photo-12.jpg" alt="">
+                    <p class="lng-monument-scroll-p-2">
+                        The monument to Vahagn's glory, 'Vahagn Vishapakagh', was erected in memory of the people of Vahagn who died in the Great Patriotic War. In 1967, a commission was formed from the people of Vahagn (living in different places) to regulate the process of raising money and completing the project.
+                    </p>
+                    <a class="learn_more learn_monument lng-learn-monument" href="#monument">Learn more ></a>
+                </div>
+            </div>
+         
+
+            <div class="slider_all">     
+                <button class="slider_but next"><img src="./img/next.png" alt=""></button>
+                <button class="slider_but back"><img src="./img/back.png" alt=""></button>
+                <div class="slider">
+                    <div class="slider_init">
+                        <div class="slider_box Sanahin-slider">
+                            <img src="img/photo-1.jpg" alt="">
+                        </div>
+
+                        <div class="slider_box Lori-slider">
+                            <img src="img/photo-2.jpg" alt="">
+                        </div>
+
+                        <div class="slider_box Haghpat-slider">
+                            <img src="img/photo-3.jpg" alt="">
+                        </div>
+
+                        <div class="slider_box Odzun-slider">
+                            <img src="img/photo-4.jpg" alt="">
+                        </div>
+
+                        <div class="slider_box Horomayr-slider">
+                            <img src="img/photo-5.jpg" alt="">
+                        </div>
+
+                        <div class="slider_box Kobayr-slider">
+                            <img src="img/photo-6.jpg" alt="">
+                        </div>
+
+                        <div class="slider_box Hnevank-slider">
+                            <img src="img/photo-7.jpg" alt="">
+                        </div>
+
+                        <div class="slider_box Akhtala-slider">
+                            <img src="img/photo-8.jpg" alt="">
+                        </div>
+
+                        <div class="slider_box Kurtan-slider">
+                            <img src="img/photo-9.jpeg" alt="">
+                        </div>
+
+                        <div class="slider_box Hovhanes-slider">
+                            <img src="img/photo-10.jpg" alt="">
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </section>
+    </section>    
+    
+        <section class="section_three" id="location">
+            <div class="all_content section_three_cont">
+                <h2 class="lng-location">Location</h2>
+                <div class="map_section">
+                    <div class="map_p">
+                        <p class="map_p_info lng-location-p-1">
+                            The village has a favorable geographical position. It is surrounded by forests և three riverst Zamarlu, Vahagn, Pambak. There are old settlements around four sides and Cyclopean-era mausoleum. The walls of the fortress have been preserved in the area called Hanu barns, according to the elders of the village, they are the ruins of the walls of the fortress of Lenk Temur. There are many khachkars, a mighty tree and water in the area called Veruhagn. According to the legend, the Mighty water has healing features. There are various trees in the forests: wild pear, beech, wild apple, oak, linden, etc. It is famous for its animal diversity: wolves, bears, foxes, deer, wild rabbits, wild cats. 
+                        </p>
+
+                        <p class="map_p_info lng-location-p-2">
+                            The village has always been known for its educational level, as it has always had a secondary school, of which graduators, studying in higher educational institutions, later took place among various positions in the country. Among the famous people of the village are Anton Yervand Kochinyan (Chairman of the Council of Ministers of Soviet Armenia, later First Secretary of the Communist Party). Hrachik Yervand Kochinyan - Candidate of Geological Sciences, famous geologist. Vardumyan Telemak, lecturer at the Yerevan State Pedagogical Institute, later rector of the Vanadzor Pedagogical Institute. Derenik Vardumyan, researcher at the Yerevan Ethnographic Institute, head of the chair.
+                        </p>
+                        <a class="learn_more learn_loc lng-learn-more-2" href="#about">Իմանալ ավելին Իմանալ></a>
+                    </div>
+
+                    <div class="map_p">
+                        <div  id="googlemaps"> </div>
+                    </div>
+            </div>
+        </section>
+
+        <section class="all_content all_content_two" id="about">
+            <div class="section_about">
+                <div class="section_about_h2">
+                   <h2 class="lng-about">About</h2>
+                </div>
+                <div class="about_sec sec_about_one">
+                    <img src="img/vahagni-map.png" alt="">
+                </div>
+                <div class="about_sec">
+                    <p class="lng-about-p-1">
+                        The village has a favorable geographical position. Surrounded by forests և three rivers. Zamarlu, Vahagn, Pambak. There are old settlements on all four sides, a Cyclopean-era mausoleum. The walls of the fortress have been preserved in the area called Hanu barns, according to the elders of the village, the ruins of the walls of the fortress of Lenk Temur. There are many khachkars, a mighty tree and a water in the area called Veruhagn. According to the legend, the Mighty Source has healing features. There are various trees in the forests: wild pear, beech, wild apple, oak, linden, etc. It is distinguished by animal diversity: wolves, bears, foxes, deer, wild rabbits, wild cats. The village has always been known for its educational level, as it has always had a secondary school, of which graduators, studying in higher educational institutions, later took place among various positions in the country. Among the famous people of the village are Anton Yervand Kochinyan (Chairman of the Council of Ministers of Soviet Armenia, later First Secretary of the Communist Party). Hrachik Yervand Kochinyan - Candidate of Geological Sciences, famous geologist. Vardumyan Telemak, lecturer at the Yerevan State Pedagogical Institute, later rector of the Vanadzor Pedagogical Institute. Derenik Vardumyan, researcher at the Yerevan Ethnographic Institute, head of the chair. Vardumyan Shavarsh, Secretary of Vanadzor City Committee, then employee of the Ministry of Enlightenment of Yerevan. Vladimir Ohanyan - Deputy Head of the Armenian Guy. Mayilyan Arzhanik, director of the Vahagni state farm, later chairman of the Gugark district executive committee. Seyran Ghazaryan - Director of Vahagni State Farm, Second Secretary of Gugark Regional Committee, Chairman of the Executive Committee. Liparit Sargsyan - poet, member of the Writers' Union of Armenia. Samvel Hrachik Kochinyan, doctor, manual therapist, member of the academy. Hovik Kochinyan - famous painter. Ninel Kostandyan - poet. Hundreds of Armenians from the village of Vahagn participated in World War II. The village had many victims. Garnik Barseghi Vardumyan, the hero of the Great Patriotic War. It is noteworthy that the only nurse volunteered from the Gugark region, Marusya Kochinyan, was from the village of Vahagni, sacrificing her life for the sake of the homeland at the age of twenty. Now the village hospital is named after Marusya Kochinyan. There is a monument in the village commemorating the victims of the Great Patriotic War, which is the third tallest monument in Armenia. There is a secondary school, a kindergarten and a newly established youth center in the village. St. Nshan Church in Vahagni.
+                        <br>
+                        <p class="lng-lastnames">There are 7 families living in the village</p> <br> 
+                        <p class="p_bold lng-lastname-1">Kostadyans</p> <br>
+                        <p class="p_bold lng-lastname-2">Paremoizyans</p> <br>
+                        <p class="p_bold lng-lastname-3">Kochinyans</p> <br>
+                        <p class="p_bold lng-lastname-4">Mosinyans</p><br> 
+                        <p class="p_bold lng-lastname-5">Vardumyans</p> <br>
+                        <p class="p_bold lng-lastname-6">Martirosyans</p><br>
+                        <p class="p_bold lng-lastname-7">Kodoshyans</p>                                       
+                    </p>
+                </div>
+            </div>
+
+            <div class="h3-his" id="history">
+            <h3 class="lng-history">History</h3>
+            </div>
+            <p class="lng-history-p-1">
+                Vahagn village is quite an old village. According to historians, it has a history of 3500 years. There were 2 neighboring villages in the former territory of the settlement: Verin Vahagn և Nerkin Vahagn (in honor of the god of Armenian courage Vahagn, the villagers called those areas Hagni). In the 17th century, the Persians settled in Nerkin Vahagni and named the village Shahali. In 1802 the village was relocated with 7 families who migrated from Western Armenia, Karabakh and Ijan. 1947 The settlement was renamed Vahagn. In 1807, the village church, Surb Nshan, was built. In the center of the village, on a hill, stands the monument to Vahagn's glory. The monument to Vahagn the Dragon was erected in honor of the people of Vahagn who died in the Great Patriotic War. The village had famous people, including Anton Kochinyan, a politician, Gusan Zakaryan, a composer, Garnik Vardumyan, a hero of the Great Patriotic War, and others. In 2000 the secondary school after A. Kochiyan was built. In 2013, when A. Kochinyan celebrated his 100th birthday, busts of him and G. Zakaryan were built in the school yard. In 2014, a gym was built next to the school. There is also 'Hani' EC in the village, the aim of which is to ensure the development of children, the promotion of tourism, the strengthening of the village. Vahagn is located in Lori region, 21 km northeast of Vanadzor, at 1030 m above sea level. The Vahagn river flows near the village. The historical past of the village is suggested by the khachkars of the 12-13th centuries in the surrounding areas. Mausoleums from the Cyclopean era have been preserved in Vahagni. There are icy rocks in the village.
+            </p>
+        </section>
+        
+            <section class="about_info_wrapper">
+                <div class="all_content all_content_for">
+                    
+                    <div class="about_info">   
+                        <button class="down_top"><img src="img/down.png" alt=""></button>
+                        <div class="about_info_box">
+                            <img src="img/photo-1.jpg" alt="">
+                        </div>
+
+                        <div class="about_info_box">
+                            <img src="img/photo-2.jpg" alt="">
+                        </div>
+
+                        <div class="about_info_box">
+                            <img src="img/photo-3.jpg" alt="">
+                        </div>
+
+                        <div class="about_info_box">
+                            <img src="img/photo-4.jpg" alt="">
+                        </div>
+
+                        <div class="about_info_box">
+                            <img src="img/photo-5.jpg" alt="">
+                        </div>
+
+                        <div class="about_info_box">
+                            <img src="img/photo-6.jpg" alt="">
+                        </div>
+
+                        <div class="about_info_box">
+                            <img src="img/photo-7.jpg" alt="">
+                        </div>
+
+                        <div class="about_info_box ">
+                            <img src="img/photo-8.jpg" alt="">
+                        </div>
+
+                        <div class="about_info_box">
+                            <img src="img/photo-9.jpeg" alt="">
+                        </div>
+
+                        <div class="about_info_box">
+                            <img class="last-img" src="img/photo-10.jpg" alt="">
+                        </div>
+                    </div>    
+                </div>
+            </section>
+            <section class="all_content all_content_three">
+                <div class="church-h2" id="church">
+                <h2 class="lng-church">H. Nshan Church</h2>
+                </div>
+                <p class="lng-church-p-1">
+                    It is not a secret, that the Armenian monasteries and churches have played a great role in the spiritual and cultural life of the Armenian people. It is also not a secret that in Armenia, outside of the churches, there are many churches, monasteries and chapels in the country without state care, which alos have cultural value. Like all the churches in Armenia, this one is not an exception. Among such churches is S. Nshan church of Vahagni village of Lori region. Before the construction of Nshan Church, the village was not considered a settlement, as there was no spirit center in the village. In 1806-1807 the church of Vahagni (Shahali) was built by seven families of the village. The elders of the families gathered together and sent a delegation consisting of several people to the Catholicos. The Catholicos announces to the priest of Gharakilisa to provide the settlement with clergy so that a village can be formed. The sign provided the caring life of the community. The bell tower was built later in 1836. The church was built by one person during one year (1807) as a repentance.
+                </p>
+
+                <p class="lng-church-p-2">
+                    The bell tower of the church was built as a result of an argument between a sister and a brother. According to the tradition, Sargis blamed his nephews for his burnt grass, but in the end it turns out that they were not guilty. The only way to get rid of guilt was to build a church bell tower. Sarkis thought that it was a dishonest money, as a repentance, he built the Belfry (1836). St. Nshan Church functioned until the establishment of the Soviet Order until 1922. Then it turned into a collective farm warehouse. The roof finally collapsed in 1988 due to a devastating earthquake. The church is now destroyed, only the church walls and the bell tower are standing. Over time, due to the lack of renovation of the church, the walls of the church became more damaged due to rain, dampness and moisture. Now the church is in a deplorable state. The village does not have a care center at the moment, the villagers are comforted by the only khachkar, which is considered a place of pilgrimage and an environment of unification. If the state is not able to stand on its own two feet, then we, the young people, are obliged to at least restore what we have in exchange for what we have lost, with the prospect of not losing it or desecrating it. On this occasion, we had interviews with people who are ready to support this initiative within their competence. Aramayis Sahakyan, a graduate student at the Georgian Seminary in Etchmiadzin, says that he has visited the village of Vahagni several times and prayed in the church together with the village youth and schoolchildren. to become a communicator of values. Every church is an expression of faith. ”
+                    <br>
+                    <br>
+                    <br>
+                    <p class="lng-church-p-3">
+                        Vahagni A. The director of the secondary school after Kochinyan, Andranik Kochinyan, says. 'The Armenian Apostolic Church has a very important role for each community. History has shown that the church has played a great role in the defense of the nation. Unfortunately, at this moment St. Nshan Church is bowed, we can not visit the church on holidays, we go to Vanadzor to participate in church holidays. Through the Armenian Apostolic Church we will be able to prevent the spread and substantiation of sects in the community. While studying sects, I realized that they mainly undermine the foundations of the state. The renovation of the church will have a positive impact on the cultural and caring development of the community.'Grandpa Vigen, a resident of the village, tells. 'I still remember how a liturgy was served in the church, at that time the church was a strong link for the development of culture and caring life. I still play the role of the church for our village'.The village considers it a big family, and the church - the house, if the church is destroyed, it can be considered that the family is also divided.'Until now, the church bells ring in my ears, it would be good if the church bells rang in the community during the church holidays,' says Pope Vigen.Another resident of the community says that if someone is found to help with the renovation of the church, the whole village is ready to help.Suren Vardumyan, one of the active young people of the village, did a great job for the renovation of the church.He set up a fund to raise money for the renovation of the church, as there was an architect who was ready. to the case. That student was Garnik Vardumyan, a resident of Vahagni villageHe went to war among the 445 people of Vahagn and fought for every inch of land with unreserved devotion.
+                    </p>
+                </p>
+
+                <div class="all_content_three_img">
+                    <img src="img/photo-11.jpg" alt="">
+                </div>
+
+                <div class="monument-h2" id="monument">
+                    <h2 class="lng-monument">The monument of the Vahagn Vishapakagh</h2>
+                </div>
+                
+                
+                <p class="lng-monument-p-1">
+                    The monument to Vahagn's glory, 'Vahagn Vishapakagh', was erected in memory of the people of Vahagn who died in the Great Patriotic War. In 1967, a commission was formed from the people of Vahagn (living in different places) to regulate the process of raising money and completing the project. The monument was built exclusively with the money collected by the people of Vahagn. The monument was designed by architect Liparit Sadoyan. The statue of Vahagn was sculpted and molded by the famous sculptor Chubar (Chubaryan). Construction of the monument began in 1968 and was completed in May 1973. The solemn opening of the monument took place on May 9, 1973.
+                </p>
+
+                <div class="all_content_three_img">
+                    <img src="img/photo-12.jpg" alt="">
+                </div>
+            </section>
+            <footer>
+                <div class="all_content">
+                    <p>&#169;</p>
+                </div>
+            </footer>
+            <script src="./header-style/js/weather.js"></script>
+            <script src="js/main.js"></script>
+            <script src="./js/lang.js"></script>
+            <script src="./js/app.js"></script>
+            <script src="./header-style/js/map.js"></script>
+            <script src="./header-style/js/menu.js"></script>
+            <script src="./header-style/js/theme.js"></script>
+            <script src="./header-style/js/scroll.js"></script>
+
+</body>
+</html>
