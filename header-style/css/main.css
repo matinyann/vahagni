@@ -274,7 +274,7 @@ body .header.on_opened_menu  {
   --mobile-menu-text-color: white;
   --language-img: url("../img/lang-light.png");
   --language-img-after-scroll: url(../img/lang-light.png);
-  --map-p-img: url(../img/map\ _Dark.png);
+  --map-p-img: url(../img/map_Dark.png);
   --home-bg: #3b3b44;
   --news-bg: #333a5a;
   --settings-bg: #644343;
@@ -556,7 +556,7 @@ body .header .container .menu_icon span {
 }
 
 body .header .container .menu_icon span:nth-child(1) {
-  top: 0px;
+  top: 0;
 }
 
 body .header .container .menu_icon span:nth-child(2) {

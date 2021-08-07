@@ -5,8 +5,6 @@ const getWeather = () => {
         .then(function (response) { return response.json() })
         .then(function (data) {
             placeItems(data);
-            console.clear();
-            console.log(data);
         });
 
     this.placeItems = (data) => {
@@ -22,7 +20,6 @@ const getWeather = () => {
         main.forEach(e => e.innerHTML = data.weather[0].main + ", &nbsp");
         desc.forEach(e => e.innerHTML = data.weather[0].description);
         weatherIcon.forEach(e => e.setAttribute("src", `http://openweathermap.org/img/w/${data.weather[0].icon}.png`));
-        weatherIcon.innerHTML = weatherIcon.setAttribute("src", `http://openweathermap.org/img/w/${data.weather[0].icon}.png`);
     }
 
     

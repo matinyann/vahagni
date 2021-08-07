@@ -1,5 +1,4 @@
 const header = document.querySelector('.header');
-const maps = document.querySelector("#googlemaps");
 const menuMob = document.querySelector(".menu_mob");
 
 window.onscroll = () => {

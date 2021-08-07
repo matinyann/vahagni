@@ -14,5 +14,5 @@ menuBtn.addEventListener("click", () => {
 
 
 document.querySelector('.menu_icon').addEventListener("click", () => {
-    document.querySelector('.menu_icon').classList.toggle("open");
+    menuBtn.classList.toggle("open");
 })

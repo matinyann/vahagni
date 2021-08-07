@@ -211,6 +211,16 @@ const lang = {
     "monument-p-1": {
         "en": "The monument to Vahagn's glory, 'Vahagn Vishapakagh', was erected in memory of the people of Vahagn who died in the Great Patriotic War. In 1967, a commission was formed from the people of Vahagn (living in different places) to regulate the process of raising money and completing the project. The monument was built exclusively with the money collected by the people of Vahagn. The monument was designed by architect Liparit Sadoyan. The statue of Vahagn was sculpted and molded by the famous sculptor Chubar (Chubaryan). Construction of the monument began in 1968 and was completed in May 1973. The solemn opening of the monument took place on May 9, 1973.",
         "arm": "Վահգնիի փառքի հուշարձանը՝ 《Վահագն վիշապաքաղը》կանգնեցվել է հայրենական մեծ պատերազմում զոհված Վահագնեցիների հիշատակին։ 1967 թվականին վահագնեցիներից (տարբեր վայրերում բնակվող) կազմվել է մի հանձնաժողով, որը կարգավորում էր գումար հավաքելու և նախագիծը ավարտելու գործընթացը։ Հուշարձանը կառուցվել է բացառապես վահագնեցիների հավաքած գումարներով։ Հուշարձանը նախագծել է ճարտարապետ Լիպարիտ Սադոյանը։ Վահագնիի արձանը քանդակել և ձուլել է հայտնի քանդակագործ Չուբարը(Չուբարյան)։ Հուշարձանի շինարարությունը սկսվել է 1968֊ին և ավարտվել  է 1973թ֊ի մայիսին։ 1973թ մայիսի 9֊ին տեղի է ունեցել հուշարձանի հանդիսավոր բացումը։"
+    },
+
+    "sorry": {
+        "en" : "Sorry :(",
+        "arm": "Ցավում ենք :("
+    },
+
+    "message": {
+        "en": "The game isn't available for mobile devices.",
+        "arm": "Խաղը հասանելի չէ մոբայլ սարքերի համար։"
     }
     
 }

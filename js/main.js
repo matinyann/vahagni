@@ -27,9 +27,9 @@ function windowSize() {
     console.log(window.innerWidth);
 }
 
-window.addEventListener('resize', function () {
-    console.log(window.innerWidth);
-})
+// window.addEventListener('resize', function () {
+//     console.log(window.innerWidth);
+// })
 
 function init() {
     if (window.innerWidth > 992) {
@@ -86,13 +86,9 @@ back.addEventListener('click', function () {
 function ScrollSlidder() {
     if (window.innerWidth > 992) {
         sliderLine.style.transform = 'translate( -' + count * width_1200 + 'px)';
-    }
-
-    else if (window.innerWidth <= 992 && window.innerWidth > 768) {
+    } else if (window.innerWidth <= 992 && window.innerWidth > 768) {
         sliderLine.style.transform = 'translate( -' + count * width + 'px)';
-    }
-
-    else if (window.innerWidth <= 768) {
+    } else if (window.innerWidth <= 768) {
         sliderLine.style.transform = 'translate( -' + count * width_two + 'px)';
     }
 }
