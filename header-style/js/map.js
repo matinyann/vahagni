@@ -7,7 +7,7 @@ function map() {
     var mapOptions = {
         zoom: 15,
         streetViewControl: false,
-        mapTypeId: google.maps.MapTypeId.SATELLITE,
+        mapTypeId: google.maps.MapTypeId.TRANSPORT,
         center: latLng
     };
 
